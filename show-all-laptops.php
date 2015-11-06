@@ -1,9 +1,4 @@
-<!DOCTYPE html> 
-<link href="assets/css/bootstrap.rtl.css" rel="stylesheet" />
-<!-- FONT AWESOME ICONS -->
-<link href="assets/css/font-awesome.css" rel="stylesheet" />
-<!-- CUSTOM STYLE -->
-<link href="assets/css/style.css" rel="stylesheet" />
+<!DOCTYPE html>
 <?php include 'head.php'; ?>
 <?php include 'header.php'; ?>
 
@@ -77,20 +72,94 @@ if($admin)include 'admin-menu.php'; ?>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-9"> 
-    	<div class="col-md-3"></div>
-        <div class="col-md-3"></div>
-        <div class="col-md-3"></div>
-        <div class="col-md-3"></div>
-        
+      <div class="col-lg-9">
+        <div class="row">
+          <div class="col-md-4" >
+            <div class="bordered" style="padding-bottom:10px;">
+              <div style="text-align:center !important"><img src="assets/img/lenovo3.jpg"></div>
+              <div style="text-align:center; font-family: caption !important;">
+                <div>Lenovo Z5110 Ideapad</div>
+                <div>تومان 2,8500,000</div>
+                <div class="row">
+                  <div class="col-sm-6">موجود</div>
+                  <div class="col-sm-6"><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" >
+            <div class="bordered" style="padding-bottom:10px;">
+              <div style="text-align:center !important"><img src="assets/img/lenovo1.jpg"></div>
+              <div style="text-align:center; font-family: caption !important;">
+                <div>Lenovo Z5110 Ideapad</div>
+                <div>تومان 2,8500,000</div>
+                <div class="row">
+                  <div class="col-sm-6">موجود</div>
+                  <div class="col-sm-6"><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" >
+            <div class="bordered" style="padding-bottom:10px;">
+              <div style="text-align:center !important"><img src="assets/img/lenovo4.jpg"></div>
+              <div style="text-align:center; font-family: caption !important;">
+                <div>Lenovo Z5110 Ideapad</div>
+                <div>تومان 2,8500,000</div>
+                <div class="row">
+                  <div class="col-sm-6">موجود</div>
+                  <div class="col-sm-6"><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-4" >
+            <div class="bordered" style="padding-bottom:10px;">
+              <div style="text-align:center !important"><img src="assets/img/lenovo1.jpg"></div>
+              <div style="text-align:center; font-family: caption !important;">
+                <div>Lenovo Z5110 Ideapad</div>
+                <div>تومان 2,8500,000</div>
+                <div class="row">
+                  <div class="col-sm-6">موجود</div>
+                  <div class="col-sm-6"><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" >
+            <div class="bordered" style="padding-bottom:10px;">
+              <div style="text-align:center !important"><img src="assets/img/lenovo2.jpg"></div>
+              <div style="text-align:center; font-family: caption !important;">
+                <div>Lenovo Z5110 Ideapad</div>
+                <div>تومان 2,8500,000</div>
+                <div class="row">
+                  <div class="col-sm-6">موجود</div>
+                  <div class="col-sm-6"><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" >
+            <div class="bordered" style="padding-bottom:10px;">
+              <div style="text-align:center !important"><img src="assets/img/lenovo3.jpg"></div>
+              <div style="text-align:center; font-family: caption !important;">
+                <div>Lenovo Z5110 Ideapad</div>
+                <div>تومان 2,8500,000</div>
+                <div class="row">
+                  <div class="col-sm-6">موجود</div>
+                  <div class="col-sm-6"><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<!-- /container -->
-</div>
-<!-- CONTENT-WRAPPER SECTION END-->
-
 <?php include 'footer.php'; ?>
 </body>
 </html>

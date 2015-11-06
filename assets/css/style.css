@@ -93,7 +93,9 @@ margin:0 auto;
 	background-color:#767474 !important;
 	font-size:14px;	
 }
-
+.bordered{
+	border:thin solid #7B7B7B;
+}
 
 
 

@@ -19,18 +19,18 @@ if($admin)include 'admin-menu.php'; ?>
   <div class="container">
     <div class="row stylish-panel">
             <div class="col-md-6">
-                <div>
-                    <a href="addmobile.php">
+                <div onClick="location.href='addmobile.php'">
+                    
                     <img src="assets/img/addphone.jpg?q=tbn:ANd9GcS9-2ilXklRuD6qYIgQ96vMUDXEM-7uc_XKgz3lzLwqw_10AGsBRg" alt="Texto Alternativo" class="img-circle img-thumbnail">
                     <h2>اضافه کردن گوشی موبایل</h2>
-                </a>
+                
                 </div>
             </div>
         
 
 
       <div class="col-md-6">
-        <div>
+        <div onClick="location.href='addlaptop.php'">
           <img src="assets/img/addlaptop.jpg?q=tbn:ANd9GcS5Sh9oxwHw2lNDgOpqNkeQdbRsFYkAWrR_0Fu6qoBdswe-X3a26g" alt="Texto Alternativo" class="img-circle img-thumbnail">
           <h2>اضافه کردن لپتاپ</h2>
         </div>

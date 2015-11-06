@@ -16,7 +16,7 @@
           <div class="user-settings-wrapper">
             <ul class="nav">
               <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"> <span class="glyphicon fa fa-user-plus " style="font-size: 25px;"></span> </a>
-                <div class="dropdown-menu dropdown-settings pull-left text-center"> <a href="userlogin.html" class="btn btn-success btn-sm"data-toggle="modal" data-target="#myModal">ورود</a> &nbsp; <a href="resigter.html" class="btn btn-info btn-sm" >ثبت نام</a> </div>
+                <div class="dropdown-menu dropdown-settings pull-left text-center"> <a href="userlogin.html" class="btn btn-success btn-sm"data-toggle="modal" data-target="#myModal">ورود</a> &nbsp; <a href="resigter.php" class="btn btn-info btn-sm" >ثبت نام</a> </div>
               </li>
             </ul>
           </div>
@@ -33,12 +33,12 @@
           <button type="button" class="btn mybtn dropdown-toggle" data-toggle="dropdown"> کالای دیجیتال <span class="caret"></span></button>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">تلفن همراه</a></li>
-            <li><a href="#">لپتاپ</a></li>
+            <li><a href="show-all-laptops.php">لپتاپ</a></li>
           </ul>
         </div>
         <div class="btn-group">
           <button type="button" class="btn mybtn">درباره دیجی کالا</button>
-          <button type="button" class="btn mybtn">ضمانت دیجی کالا</button>
+          <button type="button" class="btn mybtn" onClick="location.href='zemanat.php'">ضمانت دیجی کالا</button>
           <button type="button" class="btn mybtn">نحوه تحویل</button>
         </div>
       </div>

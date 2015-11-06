@@ -20,7 +20,7 @@ if($admin)include 'admin-menu.php'; ?>
     <div class="row stylish-panel">
             <div class="col-md-6">
                 <div>
-                    <a href="addmobile.html">
+                    <a href="addmobile.php">
                     <img src="assets/img/addphone.jpg?q=tbn:ANd9GcS9-2ilXklRuD6qYIgQ96vMUDXEM-7uc_XKgz3lzLwqw_10AGsBRg" alt="Texto Alternativo" class="img-circle img-thumbnail">
                     <h2>اضافه کردن گوشی موبایل</h2>
                 </a>

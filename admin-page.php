@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
 <?php include 'head.php'; ?>
 <?php include 'header.php'; ?>
-<?php if(!isadmin()) header("Location: index.php"); ?>
 <body>
+<?php if(isadmin()): ?>
 <div class="content-wrapper">
   <div class="container">
     <div class="row">
@@ -39,6 +39,18 @@
 <?php include 'footer.php'; ?>
 <!-- FOOTER SECTION END--> 
 <!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  --> 
-<!-- CORE JQUERY SCRIPTS --> 
+<!-- CORE JQUERY SCRIPTS -->
+
+<?php else: ?>
+<div class="container">
+  <div class="alert alert-danger fade in myalert">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <h1> شما حق دسترسی به این صفحه را ندارید. </h1>
+    <a href="index.php"><h4>بازگشت به صفحه اصلی</h4></a>
+  </div>
+</div>
+<?php endif; ?>
+
+
 </body>
 </html>

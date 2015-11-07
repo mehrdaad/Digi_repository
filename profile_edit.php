@@ -3,9 +3,7 @@
 <?php include 'header.php'; ?>
 
 <body>
-<?php 
-$admin=false;
-if($admin)include 'admin-menu.php'; ?>
+<?php if(!islogin()) header("Location: index.php"); ?>
     <!-- MENU SECTION END-->
 
     <div class="content-wrapper">

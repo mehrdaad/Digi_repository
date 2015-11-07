@@ -99,7 +99,10 @@ margin:0 auto;
 .myalert {
     margin: 15px 0 0;
 }
-
+.english{
+	font-family:Cambria !important;
+	font-size:15px !important;
+}
 
 
 /**********************************/

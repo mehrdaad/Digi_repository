@@ -26,7 +26,7 @@ $err="";
          <form action="logout.php" method="post">
             <button class="btn btn-info pull-left" name="exit" type="submit"><i class="glyphicon glyphicon-log-out"></i> &nbsp;&nbsp;خروج&nbsp;</button>
          </form>
-          <a class="btn btn-info pull-left" style="margin-left:15px;" href="#"><i class="glyphicon glyphicon-user"></i> &nbsp;&nbsp;ویرایش پروفایل&nbsp;
+          <a class="btn btn-info pull-left" style="margin-left:15px;" href="profile_edit.php"><i class="glyphicon glyphicon-user"></i> &nbsp;&nbsp;ویرایش پروفایل&nbsp;
                 </a>
          
 		 <?php endif; ?>
@@ -54,7 +54,7 @@ $err="";
             <?php else:?>
             
            
-            	<a class="btn btn-success" href="#"><i class="glyphicon glyphicon-shopping-cart"></i> &nbsp;&nbsp; سبد خرید شما &nbsp;
+            	<a class="btn btn-success" href="buying-form.php"><i class="glyphicon glyphicon-shopping-cart"></i> &nbsp;&nbsp; سبد خرید شما &nbsp;
                 <span class="badge" style="font-size:15px;">1</span></a>
                 
             <?php endif; ?>
@@ -76,14 +76,14 @@ $err="";
         <div class="btn-group">
           <button type="button" class="btn mybtn dropdown-toggle" data-toggle="dropdown"> کالای دیجیتال <span class="caret"></span></button>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">تلفن همراه</a></li>
+            <li><a href="show-all-phones.php">تلفن همراه</a></li>
             <li><a href="show-all-laptops.php">لپتاپ</a></li>
           </ul>
         </div>
         <div class="btn-group">
-          <button type="button" class="btn mybtn">درباره دیجی کالا</button>
+          <button type="button" class="btn mybtn" onClick="location.href='about-digikala.php'">درباره دیجی کالا</button>
           <button type="button" class="btn mybtn" onClick="location.href='zemanat.php'">ضمانت دیجی کالا</button>
-          <button type="button" class="btn mybtn">نحوه تحویل</button>
+          <button type="button" class="btn mybtn" onClick="location.href='sending-methods.php'">نحوه تحویل</button>
           <button type="button" class="btn mybtn" onClick="location.href='aboutus.php'">درباره ما</button>
         </div>
       </div>

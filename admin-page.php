@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <?php include 'head.php'; ?>
 <?php include 'header.php'; ?>
-
+<?php if(!isadmin()) header("Location: index.php"); ?>
 <body>
 <div class="content-wrapper">
   <div class="container">

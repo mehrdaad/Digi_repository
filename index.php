@@ -28,69 +28,83 @@ if($admin)include 'admin-menu.php'; ?>
       
       <!-- Left and right controls --> 
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
-    <div class="panel panel-default margin-top padding-top">
+<div class="panel panel-default panel-top-margin">
+      <div class="panel-heading">کالاهایی که بیشترین خرید را داشتند</div>
+      <div class="panel-body">      
       <div class="row">
         <div class="col-md-3 text-center">
         <a href="#">
           <div><img src="assets/img/t1.jpg"></div>
-          <div>ظروف و وسایل یکبار مصرف</div>
+          <div class="english">Lenovo Ideapad not Gaming 510h735</div>
         </a>
         </div>
         <div class="col-md-3 text-center">
         <a href="#">
           <div><img src="assets/img/t2.jpg"></div>
-          <div>انگشتر و دستبند</div>
+          <div class="english">Lenovo Ideapad Gaming 510h735</div>
         </a>
         </div>
         <div class="col-md-3 text-center">
         <a href="#">
           <div><img src="assets/img/t3.jpg"></div>
-          <div>حوله خواهران مخصوص مو</div>
+          <div class="english">Lenovo Essential Ideapad Gaming 510h735</div>
         </a>
         </div>
         <div class="col-md-3 text-center">
         <a href="#">
           <div><img src="assets/img/t4.jpg"></div>
-          <div>کیف و وسایل چرمی فقط در چرم کده</div>
+          <div class="english">Asus gamin product C510h Ideapad</div>
          </a>
         </div>
       </div>
+      
+      
+      
+      
+      
+      
+      </div>
     </div>
-    
-    <div class="panel panel-default margin-top padding-top">
+
+ <div class="panel panel-default panel-top-margin">
+      <div class="panel-heading">جدید ترین کالاها</div>
+      <div class="panel-body">
+      
       <div class="row">
-        
-        
         <div class="col-md-3 text-center">
         <a href="#">
           <div><img src="assets/img/t5.jpg"></div>
-          <div>اسباب بازی کودکان</div>
+          <div class="english">اAsus gamin product C510h Ideapad</div>
         </div>
         </a>
         <div class="col-md-3 text-center">
         <a href="#">
           <div><img src="assets/img/t6.jpg"></div>
-          <div>آموزش ساخت عروسک</div>
+          <div class="english">Lenovo Essential Ideapad Gaming 510h735</div>
         </a>
         </div>
         <div class="col-md-3 text-center">
         <a href="#">
           <div><img src="assets/img/t7.jpg"></div>
-          <div>کفش تن تاک</div>
+          <div class="english">Lenovo Ideapad Gaming 510h735</div>
          </a>
         </div>
         <div class="col-md-3 text-center">
         <a href="#">
           <div><img src="assets/img/t1.jpg"></div>
-          <div>ظروف و وسایل یکبار مصرف</div>
+          <div class="english">Lenovo Ideapad not Gaming 510h735</div>
         </a>
         </div>
       </div>
+      
+      </div>
     </div>
+
+
     
     <div class="panel panel-default panel-top-margin">
-      <div class="panel-heading">تازه ترین کالاها</div>
-      <div class="panel-body">سیسبسیبسیب</div>
+      <div class="panel-heading">لپتاپ های ویژه</div>
+      <div class="panel-body">در اینجا لیست تازه ترین کالاها به نمایش درخواهد آمد</div>
     </div>
   </div>
 </div>

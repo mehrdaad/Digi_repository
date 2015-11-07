@@ -76,39 +76,39 @@ if($admin)include 'admin-menu.php'; ?>
         <div class="row">
           <div class="col-md-4" >
             <div class="bordered" style="padding-bottom:10px;">
-              <div style="text-align:center !important"><img src="assets/img/lenovo3.jpg"></div>
+              <div style="text-align:center !important"><a href="show_mobile_details.php"><img src="assets/img/lenovo1.jpg"></a></div>
               <div style="text-align:center; font-family: caption !important;">
                 <div>Lenovo Z5110 Ideapad</div>
                 <div>تومان 2,8500,000</div>
                 <div class="row">
                   <div class="col-sm-6">موجود</div>
-                  <div class="col-sm-6"><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"></div>
+                  <div class="col-sm-6"><?php if(islogin()):?><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"><?php endif;?></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4" >
             <div class="bordered" style="padding-bottom:10px;">
-              <div style="text-align:center !important"><img src="assets/img/lenovo1.jpg"></div>
+              <div style="text-align:center !important"><a href="show_mobile_details.php"><img src="assets/img/lenovo2.jpg"></a></div>
               <div style="text-align:center; font-family: caption !important;">
                 <div>Lenovo Z5110 Ideapad</div>
                 <div>تومان 2,8500,000</div>
                 <div class="row">
                   <div class="col-sm-6">موجود</div>
-                  <div class="col-sm-6"><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"></div>
+                  <div class="col-sm-6"><?php if(islogin()):?><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"><?php endif;?></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4" >
             <div class="bordered" style="padding-bottom:10px;">
-              <div style="text-align:center !important"><img src="assets/img/lenovo4.jpg"></div>
+              <div style="text-align:center !important"><a href="show_mobile_details.php"><img src="assets/img/lenovo3.jpg"></a></div>
               <div style="text-align:center; font-family: caption !important;">
                 <div>Lenovo Z5110 Ideapad</div>
                 <div>تومان 2,8500,000</div>
                 <div class="row">
                   <div class="col-sm-6">موجود</div>
-                  <div class="col-sm-6"><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"></div>
+                  <div class="col-sm-6"><?php if(islogin()):?><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"><?php endif;?></div>
                 </div>
               </div>
             </div>
@@ -118,39 +118,39 @@ if($admin)include 'admin-menu.php'; ?>
         <div class="row">
           <div class="col-md-4" >
             <div class="bordered" style="padding-bottom:10px;">
-              <div style="text-align:center !important"><img src="assets/img/lenovo1.jpg"></div>
+              <div style="text-align:center !important"><a href="show_mobile_details.php"><img src="assets/img/lenovo4.jpg"></a></div>
               <div style="text-align:center; font-family: caption !important;">
                 <div>Lenovo Z5110 Ideapad</div>
                 <div>تومان 2,8500,000</div>
                 <div class="row">
                   <div class="col-sm-6">موجود</div>
-                  <div class="col-sm-6"><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"></div>
+                  <div class="col-sm-6"><?php if(islogin()):?><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"><?php endif;?></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4" >
             <div class="bordered" style="padding-bottom:10px;">
-              <div style="text-align:center !important"><img src="assets/img/lenovo2.jpg"></div>
+              <div style="text-align:center !important"><a href="show_mobile_details.php"><img src="assets/img/lenovo3.jpg"></a></div>
               <div style="text-align:center; font-family: caption !important;">
                 <div>Lenovo Z5110 Ideapad</div>
                 <div>تومان 2,8500,000</div>
                 <div class="row">
                   <div class="col-sm-6">موجود</div>
-                  <div class="col-sm-6"><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"></div>
+                  <div class="col-sm-6"><?php if(islogin()):?><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"><?php endif;?></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4" >
             <div class="bordered" style="padding-bottom:10px;">
-              <div style="text-align:center !important"><img src="assets/img/lenovo3.jpg"></div>
+              <div style="text-align:center !important"><a href="show_mobile_details.php"><img src="assets/img/lenovo1.jpg"></a></div>
               <div style="text-align:center; font-family: caption !important;">
                 <div>Lenovo Z5110 Ideapad</div>
                 <div>تومان 2,8500,000</div>
                 <div class="row">
                   <div class="col-sm-6">موجود</div>
-                  <div class="col-sm-6"><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"></div>
+                  <div class="col-sm-6"><?php if(islogin()):?><img src="assets/img/shopping.jpg" style="cursor:pointer" role="button"><?php endif;?></div>
                 </div>
               </div>
             </div>

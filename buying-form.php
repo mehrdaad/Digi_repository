@@ -18,7 +18,7 @@ if($admin)include 'admin-menu.php'; ?>
       
       
       
-      <form class="form-horizontal" dir = "rtl">
+      <form class="form-horizontal" dir = "rtl" action="bank.htm" method="post">
       <fieldset dir = "rtl">
         
         <!-- Select Basic -->

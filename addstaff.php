@@ -3,7 +3,7 @@
 <?php include 'header.php'; ?>
 
 <body>
-<?php if(!isadmin()) header("Location: index.php"); ?>
+<?php if(!isadmin()) header("Location: 'index.php'"); ?>
     <!-- MENU SECTION END-->
 
 

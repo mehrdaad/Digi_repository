@@ -1,9 +1,3 @@
-<link href="assets/css/bootstrap.rtl.css" rel="stylesheet" />
-<!-- FONT AWESOME ICONS -->
-<link href="assets/css/font-awesome.css" rel="stylesheet" />
-<!-- CUSTOM STYLE -->
-<link href="assets/css/style.css" rel="stylesheet" />
-
 <?php
 
 include("login.php");
@@ -17,28 +11,29 @@ $err="";
   <div class="container">
     <div class="row">
 
-      <div class="col-md-6"> <strong>آدرس ایمیل </strong>info@sbu.ac.ir
+      <div class="col-md-4"> 
       
+      <strong>آدرس ایمیل </strong>info@sbu.ac.ir
+      </div>
+      <div class="col-md-5 <?php if(!islogin()) print "pull-left"; ?>">
         &nbsp;&nbsp;
-        
-         </div>
-         <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search">
     <div class="form-group">
         <input type="text" class="form-control" placeholder="جستجو">
     </div>
     <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 </form>
+         </div>
+         
          <?php if(islogin()):?>
-         <div class="col-md-6">
+         <div class="col-md-3" style="padding-top: 7px;">
          <form action="logout.php" method="post">
             <button class="btn btn-info pull-left" name="exit" type="submit"><i class="glyphicon glyphicon-log-out"></i> &nbsp;&nbsp;خروج&nbsp;</button>
          </form>
-          <a class="btn btn-info pull-left" style="margin-left:15px;" href="profile_edit.php"><i class="glyphicon glyphicon-user"></i> &nbsp;&nbsp;ویرایش پروفایل&nbsp;
+          <a class="btn btn-info pull-left" style="margin-left:10px;" href="profile_edit.php"><i class="glyphicon glyphicon-user"></i> &nbsp;&nbsp;ویرایش پروفایل&nbsp;
                 </a>
-         
+          </div>
 		 <?php endif; ?>
-         
-         </div>
     </div>
   </div>
 </header>
@@ -52,6 +47,7 @@ $err="";
       <div class="col-md-6 pull-left">
         <div class="left-div">
           <div class="user-settings-wrapper">
+          
              <?php if(!islogin()): ?>
             <ul class="nav">
               <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"> <span class="glyphicon fa fa-user-plus " style="font-size: 25px;"></span> </a>
@@ -65,6 +61,7 @@ $err="";
                 <span class="badge" style="font-size:15px;">1</span></a>
                 
             <?php endif; ?>
+            
           </div>
         </div>
       </div>

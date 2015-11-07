@@ -79,8 +79,8 @@ if($admin)include 'admin-menu.php'; ?>
             <label class="control-label" for="selectbasic"></label>
           </div>
           <div class="col-md-8">
-            <button id="button1id" name="button1id" class="btn btn-success">ثبت اطلاعات خرید</button>
-            <button id="button2id" name="button2id" class="btn btn-danger">لغو خرید</button>
+            <button id="button1id" type="submit" name="button1id" class="btn btn-success">ثبت اطلاعات خرید</button>
+            <button id="button2id" name="button2id" type="reset" onClick="location.href='index.php'" class="btn btn-danger">لغو خرید</button>
           </div>
         </div>
       </fieldset>

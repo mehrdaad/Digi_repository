@@ -73,6 +73,67 @@ if($admin)include 'admin-menu.php'; ?>
         </div>
       </div>
       <div class="col-lg-9">
+        <hr>
+        <div class = "row" style="text-align: center;">
+<div id="filter-panel" class="collapse filter-panel">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <label class="filter-col" style="margin-right:0;" for="pref-perpage">تعداد سطر های هر صفحه:</label>
+                            <select id="pref-perpage" class="form-control">
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option selected="selected" value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
+                            </select>                                
+                        </div> <!-- form group [rows] -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group">
+                            <label class="filter-col" style="margin-right:0;" for="pref-search">جستجو: </label>
+                            <input type="text" class="form-control input-sm" id="pref-search">
+                            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                        </div><!-- form group [search] --> <br>
+                        <div class="form-group">
+                            <label class="filter-col" style="margin-right:0;" for="pref-orderby">نوع مرتب سازی :</label>
+                            <select id="pref-orderby" class="form-control">
+                                <option>صعودی</option>
+                                <option>نزولی</option>
+
+                            </select>                                
+                        </div> <!-- form group [order by] --> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group">
+                            <label class="filter-col" style="margin-right:0;" for="pref-orderby">مرتب سازی بر اساس :</label>
+                            <select id="pref-orderby" class="form-control">
+                                <option>قیمت</option>
+                                <option>پرفروش ترین</option>
+                                <option>جدید ترین</option>
+
+                            </select>                                
+                        </div> <!-- form group [order by] --> <br>
+                        <div class="form-group">    
+                            
+                              
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <button type="button" class="btn btn-primary " data-toggle="collapse" data-target="#filter-panel">
+            <span class="glyphicon glyphicon-cog"></span> جستجو پیشرفته
+        </button>
+        </div>
+        <hr>
         <div class="row">
           <div class="col-md-4" >
             <div class="bordered" style="padding-bottom:10px;">

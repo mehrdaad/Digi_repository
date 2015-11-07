@@ -4,7 +4,7 @@
       <div class="col-md-12">
         <div class="navbar-collapse collapse ">
           <ul id="menu-top" class="nav navbar-nav navbar-right">
-            <li><a class="menu-top-active" href="index.html">پنل مخصوص ادمین</a></li>
+            <li><a class="menu-top-active" href="admin-page.php">پنل مخصوص ادمین</a></li>
             <li><a href="index.html">UI Elements</a></li>
             <li><a href="index.html">Data Tables</a></li>
             <li><a href="index.html">Forms</a></li>

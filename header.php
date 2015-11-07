@@ -12,6 +12,7 @@ $err=login();
 else
 $err="";
 ?>
+<?php if(isadmin()) include('admin-menu.php'); ?>
 <header>
   <div class="container">
     <div class="row">
@@ -20,9 +21,9 @@ $err="";
         &nbsp;&nbsp;
         
          </div>
-         <?php if(islogin()): ?>
+         <?php if(islogin()):?>
          <div class="col-md-6">
-         <form action="index.php" method="post">
+         <form action="logout.php" method="post">
             <button class="btn btn-info pull-left" name="exit" type="submit"><i class="glyphicon glyphicon-log-out"></i> &nbsp;&nbsp;خروج&nbsp;</button>
          </form>
           <a class="btn btn-info pull-left" style="margin-left:15px;" href="#"><i class="glyphicon glyphicon-user"></i> &nbsp;&nbsp;ویرایش پروفایل&nbsp;
@@ -83,6 +84,7 @@ $err="";
           <button type="button" class="btn mybtn">درباره دیجی کالا</button>
           <button type="button" class="btn mybtn" onClick="location.href='zemanat.php'">ضمانت دیجی کالا</button>
           <button type="button" class="btn mybtn">نحوه تحویل</button>
+          <button type="button" class="btn mybtn" onClick="location.href='aboutus.php'">درباره ما</button>
         </div>
       </div>
     </div>

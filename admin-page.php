@@ -3,10 +3,6 @@
 <?php include 'header.php'; ?>
 
 <body>
-<?php include 'admin-menu.php'; ?>
-
-
-
 <div class="content-wrapper">
   <div class="container">
     <div class="row">

@@ -1,9 +1,14 @@
-<?php 
-
+<?php
+session_start();
     function login(){
-		
 				$error="";
 				$success=true;
+				if(islogin())
+				{
+					$error=$error."You are already sign in!!\n";
+					$success=false;
+				}
+				$_SESSION['islogin']=false;
 				if(empty($_POST['username']))
 				{
 					$error=$error."نام کاربری نمی تواند خالی باشد.\n";
@@ -37,9 +42,9 @@
 								
 							if($stmt->rowCount()==1) {
 							$row = $stmt->fetch(PDO::FETCH_ASSOC);
-							session_start();
 							$_SESSION['id']=$row['id'];
 							$_SESSION['access']=$row['access'];
+							//if($_SESSION['access']=="Admin") header("Location: admin-page.php");
 							}
 							else								
 							    $error=$error."نام کاربری و یا رمز عبور شما اشتباه است.\n";
@@ -54,9 +59,20 @@
 					$conn = null;
 					return($error);
 }
+
+
 function islogin(){
-	if(isset($_SESSION['id']))
+	if(isset($_SESSION["id"]))
 	return true;
+	else
+	return false;
+}
+function isadmin(){
+	if(isset($_SESSION["id"]))
+	if($_SESSION['access']=="Admin")
+	return true;
+	else
+	return false;
 	else
 	return false;
 }

@@ -137,6 +137,7 @@ if($admin)include 'admin-menu.php'; ?>
         <div class="row">
           <div class="col-md-4" >
             <div class="bordered" style="padding-bottom:10px;">
+              
               <div style="text-align:center !important"><a href="show_mobile_details.php"><img src="assets/img/lenovo1.jpg"></a></div>
               <div style="text-align:center; font-family: caption !important;">
                 <div>Lenovo Z5110 Ideapad</div>

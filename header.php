@@ -85,6 +85,8 @@ $err="";
           <button type="button" class="btn mybtn" onClick="location.href='zemanat.php'">ضمانت دیجی کالا</button>
           <button type="button" class="btn mybtn">نحوه تحویل</button>
           <button type="button" class="btn mybtn" onClick="location.href='aboutus.php'">درباره ما</button>
+
+          <button type="button" class="btn mybtn" onClick="location.href='FAQ.php'">سوالات متداول</button>
         </div>
       </div>
     </div>

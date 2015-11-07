@@ -18,13 +18,16 @@ $err="";
       <div class="col-md-5 <?php if(!islogin()) print "pull-left"; ?>">
         &nbsp;&nbsp;
         <form class="navbar-form navbar-left" role="search">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="جستجو">
-    </div>
-    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-</form>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="جستجو">
+            </div>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+
+      </form>
+      
+        &nbsp;&nbsp;
+        
          </div>
-         
          <?php if(islogin()):?>
          <div class="col-md-3" style="padding-top: 7px;">
          <form action="logout.php" method="post">

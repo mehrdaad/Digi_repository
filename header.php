@@ -16,11 +16,18 @@ $err="";
 <header>
   <div class="container">
     <div class="row">
+
       <div class="col-md-6"> <strong>آدرس ایمیل </strong>info@sbu.ac.ir
       
         &nbsp;&nbsp;
         
          </div>
+         <form class="navbar-form navbar-left" role="search">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="جستجو">
+    </div>
+    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+</form>
          <?php if(islogin()):?>
          <div class="col-md-6">
          <form action="logout.php" method="post">

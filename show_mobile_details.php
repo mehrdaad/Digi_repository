@@ -29,9 +29,18 @@ $(document).ready(function(){
 
         $('#show-next-image, #show-previous-image').click(function(){
             if($(this).attr('id') == 'show-previous-image'){
+                if (current_image == 1) {
+                    current_image = 3;
+                }
+                else
                 current_image--;
             } else {
-                current_image++;
+                if (current_image == 3) {
+                    current_image = 1;
+                }
+                else
+                    current_image ++;
+                
             }
 
             selector = $('[data-image-id="' + current_image + '"]');
@@ -44,7 +53,7 @@ $(document).ready(function(){
             $('#image-gallery-caption').text($sel.data('caption'));
             $('#image-gallery-title').text($sel.data('title'));
             $('#image-gallery-image').attr('src', $sel.data('image'));
-            disableButtons(counter, $sel.data('image-id'));
+            
         }
 
         if(setIDs == true){
@@ -68,20 +77,22 @@ if($admin)include 'admin-menu.php'; ?>
 
     <div class="row">
 
-    <div class="col-lg-12">
+
+    <div class="col-lg-12" style = "justify-content: center
+    align-items: center">
         <h1 class="page-header"></h1>
     
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
             <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-image="assets/img/sony_1.jpg" data-target="#image-gallery">
                 <img class="img-responsive" src="assets/img/sony_1.jpg" >
             </a>
         </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
             <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"  data-image="assets/img/sony_2.jpg" data-target="#image-gallery">
                 <img class="img-responsive" src="assets/img/sony_2.jpg" >
             </a>
         </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb" >
             <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"  data-image="assets/img/sony_3.jpg" data-target="#image-gallery">
                 <img class="img-responsive" src="assets/img/sony_3.jpg ">
             </a>
@@ -91,31 +102,34 @@ if($admin)include 'admin-menu.php'; ?>
 
 
 <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="image-gallery-title"></h4>
+    <div class="modal-dialog" style="width: 25%">
+        <div class="modal-content" style="align-item: center;">
+            <div class="modal-header" >
+                <button type="button" class="close"  data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="image-gallery-title">عکس های موجود برای این کالا</h4>
             </div>
-            <div class="modal-body">
-                <img id="image-gallery-image" class="img-responsive" src="assets/img/sony_1.jpg">
+            <div class="modal-body" style= "align-item: center;" >
+                
+                <img  id="image-gallery-image" class="img-responsive" src="assets/img/sony_1.jpg">
+               
             </div>
-            <div class="modal-footer">
 
-                <div class="col-md-2">
-                    <button type="button" class="btn btn-primary" id="show-previous-image">Previous</button>
+            <div class="modal-footer" style="text-align: center;">
+
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary" id="show-previous-image">عکس قبلی</button>
                 </div>
 
 
-                <div class="col-md-2">
-                    <button type="button" id="show-next-image" class="btn btn-default">Next</button>
+                <div class="col-md-6">
+                    <button type="button" id="show-next-image" class="btn btn-default">عکس بعدی</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <hr>
-                <div class="row">
+                <div class="row col-lg-12 center-block"  >
                 <div class="col-md-4">
                   <!--   Kitchen Sink -->
                     

@@ -3,9 +3,6 @@
 <?php include 'header.php'; ?>
 
 <body>
-<?php 
-$admin=false;
-if($admin)include 'admin-menu.php'; ?>
 <!-- MENU SECTION END-->
 
 <div class="content-wrapper">
@@ -34,4 +31,3 @@ if($admin)include 'admin-menu.php'; ?>
 </div>
 <?php include 'footer.php'; ?>
 </body>
-</html>

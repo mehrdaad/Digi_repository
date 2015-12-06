@@ -159,7 +159,6 @@
   </div>
 </div>
 <!-- /container -->
-</div>
 <!-- CONTENT-WRAPPER SECTION END-->
 
 <?php include 'footer.php'; ?>

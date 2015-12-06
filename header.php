@@ -1,6 +1,7 @@
 <?php
 
 include("login.php");
+include("controler.php");
 if(isset($_POST['submit']))
 $err=login();
 else

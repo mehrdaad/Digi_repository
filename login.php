@@ -8,7 +8,6 @@ session_start();
 					$error=$error."You are already sign in!!\n";
 					$success=false;
 				}
-				$_SESSION['islogin']=false;
 				if(empty($_POST['username']))
 				{
 					$error=$error."نام کاربری نمی تواند خالی باشد.\n";
@@ -40,11 +39,12 @@ session_start();
 							$stmt->bindParam(":PW", $password);
 							$stmt->execute();
 								
-							if($stmt->rowCount()==1) {
-							$row = $stmt->fetch(PDO::FETCH_ASSOC);
-							$_SESSION['id']=$row['id'];
-							$_SESSION['access']=$row['access'];
-							//if($_SESSION['access']=="Admin") header("Location: admin-page.php");
+							if($stmt->rowCount()==1) 
+                            {
+							    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+							    $_SESSION['id']=$row['id'];
+							    $_SESSION['access']=$row['access'];
+							
 							}
 							else								
 							    $error=$error."نام کاربری و یا رمز عبور شما اشتباه است.\n";

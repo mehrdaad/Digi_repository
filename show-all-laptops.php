@@ -4,8 +4,8 @@
 
 <body>
     <?php 
-$admin=false;
-if($admin)include 'admin-menu.php'; ?>
+    $admin=false;
+    if($admin)include 'admin-menu.php'; ?>
     <!-- MENU SECTION END-->
 
     <div class="content-wrapper">
@@ -112,14 +112,13 @@ if($admin)include 'admin-menu.php'; ?>
 
                     <div class="row">
                         <?php $res=query("select * from laptop"); 
-                       
-
-            if ($res->num_rows > 0) 
-            {
-            
-                while($row = $res->fetch_assoc())
-                {
-                ?>
+                              
+                              if ($res->num_rows > 0) 
+                              {
+                                  
+                                  while($row = $res->fetch_assoc())
+                                  {
+                        ?>
                         <div class="col-md-4">
                             <div class="bordered" style="padding-bottom: 10px;">
 
@@ -138,11 +137,11 @@ if($admin)include 'admin-menu.php'; ?>
                             </div>
                         </div>
                         <?php
-                
-                
-            }
-            }
-            ?>
+                                                                    
+                                                                    
+                                  }
+                              }
+                        ?>
                     </div>
 
 

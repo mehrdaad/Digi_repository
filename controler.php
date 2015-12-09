@@ -11,13 +11,14 @@
 
                     // Create connection
                     $conn = mysqli_connect($servername, $username, $password, $dbname);
+                    $conn->set_charset("utf8");
                     // Check connection
                     if (!$conn) {
                         die("Connection failed: " . mysqli_connect_error());
                     }
 
-                    $sql = "SELECT * FROM laptop";
-                    $result = mysqli_query($conn, $sql);
+                    
+                    $result = mysqli_query($conn, $q);
                     return $result;
                 }
 

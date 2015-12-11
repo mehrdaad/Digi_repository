@@ -114,7 +114,7 @@ if(isset($_POST['advance_search']))
                                         <!-- form group [rows] -->
                                         <div class="form-group">
                                             <label class="filter-col" style="margin-right: 0;" for="pref-search">جستجو پیشرفته: </label>
-                                            <input type="text" class="form-control input-sm" name="advance_search" required>
+                                            <input type="text" class="form-control input-sm" name="advance_search">
                                             <button name="adv_btn" value="adv_search" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                                         </div>
 
@@ -143,7 +143,7 @@ if(isset($_POST['advance_search']))
                             <div class="bordered" style="padding-bottom: 10px;">
 
                                 <div style="text-align: center !important">
-                                    <a href="show_mobile_details.php?id=<?php echo $row['id'];?>">
+                                    <a href="show_laptop_details.php?id=<?php echo $row['id'];?>">
                                         <img src="<?php echo $row['picture'];?>"></a>
                                 </div>
                                 <div style="text-align: center; font-family: caption !important;">

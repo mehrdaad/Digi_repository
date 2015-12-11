@@ -72,10 +72,7 @@ $(document).ready(function(){
 <body>
 <?php 
 $admin=false;
-if($admin) include 'admin-menu.php'; 
-$result=query("select * from laptop where laptop.id=".$_GET['id']);
-$row = $result->fetch_assoc();
-?>
+if($admin)include 'admin-menu.php'; ?>
     <!-- MENU SECTION END-->
 
     <div class="row">
@@ -87,7 +84,17 @@ $row = $result->fetch_assoc();
     
             <div class="col-lg-4 col-md-4 col-xs-6 thumb">
             <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-image="assets/img/sony_1.jpg" data-target="#image-gallery">
-                <img class="img-responsive" src="<?php print $row['picture']; ?>" >
+                <img class="img-responsive" src="assets/img/sony_1.jpg" >
+            </a>
+        </div>
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"  data-image="assets/img/sony_2.jpg" data-target="#image-gallery">
+                <img class="img-responsive" src="assets/img/sony_2.jpg" >
+            </a>
+        </div>
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb" >
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"  data-image="assets/img/sony_3.jpg" data-target="#image-gallery">
+                <img class="img-responsive" src="assets/img/sony_3.jpg ">
             </a>
         </div>
 
@@ -99,12 +106,24 @@ $row = $result->fetch_assoc();
         <div class="modal-content" style="align-item: center;">
             <div class="modal-header" >
                 <button type="button" class="close"  data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="image-gallery-title">عکس موجود برای این کالا</h4>
+                <h4 class="modal-title" id="image-gallery-title">عکس های موجود برای این کالا</h4>
             </div>
             <div class="modal-body" style= "align-item: center;" >
                 
                 <img  id="image-gallery-image" class="img-responsive" src="assets/img/sony_1.jpg">
                
+            </div>
+
+            <div class="modal-footer" style="text-align: center;">
+
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary" id="show-previous-image">عکس قبلی</button>
+                </div>
+
+
+                <div class="col-md-6">
+                    <button type="button" id="show-next-image" class="btn btn-default">عکس بعدی</button>
+                </div>
             </div>
         </div>
     </div>
@@ -122,32 +141,32 @@ $row = $result->fetch_assoc();
                                         <tr>
                                             <td>1</td>
                                             <td>سیستم عامل</td>
-                                            <td><?php print $row['OS']; ?></td>
+                                            <td>اندروید</td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
                                             <td>برند گوشی</td>
-                                            <td><?php print $row['brand']; ?></td>
+                                            <td>سونی</td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
                                             <td>تعداد سیم کارت</td>
-                                            <td><?php print $row['sim_cart']; ?></td>
+                                            <td>1</td>
                                         </tr>
                                         <tr>
                                             <td>4</td>
                                             <td>وزن گوشی</td>
-                                            <td><?php print $row['weight']; ?></td>
+                                            <td>...</td>
                                         </tr>
                                         <tr>
                                             <td>5</td>
                                             <td>اندازه گوشی</td>
-                                            <td><?php print $row['lcd']; ?></td>
+                                            <td>...</td>
                                         </tr>
                                          <tr>
                                             <td>6</td>
                                             <td>حافظه داخلی گوشی</td>
-                                            <td><?php print $row['intrnal_ram']; ?></td>
+                                            <td>...</td>
                                         </tr>
 
                                         <tr>
@@ -178,3 +197,4 @@ $row = $result->fetch_assoc();
     <!-- CORE JQUERY SCRIPTS -->
    
 </body>
+</html>

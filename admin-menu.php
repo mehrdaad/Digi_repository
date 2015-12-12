@@ -6,7 +6,7 @@
           <ul id="menu-top" class="nav navbar-nav navbar-right">
             <li><a class="menu-top-active" href="admin-page.php">پنل مخصوص ادمین</a></li>
             
-            <li><a href="showconfirmedstauff.php">گزارش کالاهای تایید شده</a></li>
+            <li><a href="showconfirmedstauff.php">گزارش و تغییر وضعیت همه ی کالاها</a></li>
             <li><a href="orderedstuff.php">اجناس سفارش داده شده</a></li>
             <li><a href="addstaff.php">اضافه کردن کالا</a></li>
           </ul>

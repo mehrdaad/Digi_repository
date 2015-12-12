@@ -320,7 +320,7 @@
             </tr><tr>
                 <td>
                     <span class="label">مبلغ پرداختی</span>
-                    <label>10,000</label>
+                    <label><?php echo $_GET['sum_price'] ?></label>
 
                     <span class="label">(ريال)</span>
                 </td>

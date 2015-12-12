@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2015 at 11:00 PM
+-- Generation Time: Dec 12, 2015 at 04:07 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -32,15 +32,25 @@ CREATE TABLE IF NOT EXISTS `bascket` (
   `stuff_table` varchar(30) COLLATE utf8_persian_ci NOT NULL,
   `User_id` int(11) NOT NULL,
   `buying_state` enum('در سبد خرید','خریداری شده','ارسال شده','تحویل داده شده') COLLATE utf8_persian_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `bascket`
 --
 
 INSERT INTO `bascket` (`buying_id`, `stuff_id`, `stuff_table`, `User_id`, `buying_state`) VALUES
-(1, 1, 'laptop', 1, 'در سبد خرید'),
-(2, 2, 'laptop', 1, 'در سبد خرید');
+(6, 2, 'laptop', 1, 'در سبد خرید'),
+(8, 2, 'laptop', 1, 'در سبد خرید'),
+(9, 2, 'laptop', 1, 'در سبد خرید'),
+(10, 4, 'laptop', 1, 'در سبد خرید'),
+(11, 2, 'laptop', 2, 'ارسال شده'),
+(12, 3, 'laptop', 2, 'خریداری شده'),
+(13, 1, 'phone', 2, 'ارسال شده'),
+(16, 3, 'laptop', 0, 'در سبد خرید'),
+(17, 3, 'laptop', 1, 'در سبد خرید'),
+(18, 3, 'laptop', 1, 'در سبد خرید'),
+(19, 2, 'phone', 1, 'در سبد خرید'),
+(20, 1, 'phone', 1, 'در سبد خرید');
 
 -- --------------------------------------------------------
 
@@ -67,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `laptop` (
   `lcd` varchar(50) COLLATE utf8_persian_ci NOT NULL,
   `picture` varchar(50) COLLATE utf8_persian_ci NOT NULL,
   `other_explain` text COLLATE utf8_persian_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `laptop`
@@ -89,17 +99,21 @@ CREATE TABLE IF NOT EXISTS `people` (
   `id` int(11) NOT NULL,
   `username` varchar(50) COLLATE utf8_persian_ci NOT NULL,
   `password` varchar(50) COLLATE utf8_persian_ci NOT NULL,
-  `access` enum('User','Admin') COLLATE utf8_persian_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+  `access` enum('User','Admin') COLLATE utf8_persian_ci NOT NULL,
+  `name` varchar(50) COLLATE utf8_persian_ci NOT NULL,
+  `fname` varchar(50) COLLATE utf8_persian_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_persian_ci DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `people`
 --
 
-INSERT INTO `people` (`id`, `username`, `password`, `access`) VALUES
-(1, 'meysam', '123', 'Admin'),
-(2, 'shirin', '123', 'Admin'),
-(3, 'Ali', '123', 'User');
+INSERT INTO `people` (`id`, `username`, `password`, `access`, `name`, `fname`, `email`) VALUES
+(1, 'meysam', '123', 'Admin', 'میثم', 'ولوئیان', 'hisfaceacount@gmail.com'),
+(2, 'shirin', '1234', 'Admin', 'شیرین dsfdsf', 'طهماسبی asd asd', 'shirin@chmail.com'),
+(3, 'Ali', '123', 'User', 'علی', 'محمدی', ''),
+(5, 'ldel', '321', 'User', 'ldel', 'ldel', '');
 
 -- --------------------------------------------------------
 
@@ -121,7 +135,7 @@ CREATE TABLE IF NOT EXISTS `phone` (
   `internal_ram` varchar(50) COLLATE utf8_persian_ci NOT NULL,
   `picture` varchar(50) COLLATE utf8_persian_ci NOT NULL,
   `other_explain` text COLLATE utf8_persian_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `phone`
@@ -171,22 +185,22 @@ ALTER TABLE `phone`
 -- AUTO_INCREMENT for table `bascket`
 --
 ALTER TABLE `bascket`
-  MODIFY `buying_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `buying_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `laptop`
 --
 ALTER TABLE `laptop`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `people`
 --
 ALTER TABLE `people`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `phone`
 --
 ALTER TABLE `phone`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

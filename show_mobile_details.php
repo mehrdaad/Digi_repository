@@ -1,79 +1,12 @@
 <!DOCTYPE html>
 <?php include 'head.php'; ?>
 <?php include 'header.php'; ?>
-<script>
-$(document).ready(function(){
-
-    loadGallery(true, 'a.thumbnail');
-
-    //This function disables buttons when needed
-    function disableButtons(counter_max, counter_current){
-        $('#show-previous-image, #show-next-image').show();
-        if(counter_max == counter_current){
-            $('#show-next-image').hide();
-        } else if (counter_current == 1){
-            $('#show-previous-image').hide();
-        }
-    }
-
-    /**
-     *
-     * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
-     * @param setClickAttr  Sets the attribute for the click handler.
-     */
-
-    function loadGallery(setIDs, setClickAttr){
-        var current_image,
-            selector,
-            counter = 0;
-
-        $('#show-next-image, #show-previous-image').click(function(){
-            if($(this).attr('id') == 'show-previous-image'){
-                if (current_image == 1) {
-                    current_image = 3;
-                }
-                else
-                current_image--;
-            } else {
-                if (current_image == 3) {
-                    current_image = 1;
-                }
-                else
-                    current_image ++;
-                
-            }
-
-            selector = $('[data-image-id="' + current_image + '"]');
-            updateGallery(selector);
-        });
-
-        function updateGallery(selector) {
-            var $sel = selector;
-            current_image = $sel.data('image-id');
-            $('#image-gallery-caption').text($sel.data('caption'));
-            $('#image-gallery-title').text($sel.data('title'));
-            $('#image-gallery-image').attr('src', $sel.data('image'));
-            
-        }
-
-        if(setIDs == true){
-            $('[data-image-id]').each(function(){
-                counter++;
-                $(this).attr('data-image-id',counter);
-            });
-        }
-        $(setClickAttr).on('click',function(){
-            updateGallery($(this));
-        });
-    }
-});
-</script>
 
 <body>
 <?php 
 $admin=false;
 if($admin) include 'admin-menu.php'; 
-$result=query("select * from laptop where laptop.id=".$_GET['id']);
+$result=query("select * from phone where phone.id=".$_GET['id']);
 $row = $result->fetch_assoc();
 ?>
     <!-- MENU SECTION END-->
@@ -103,7 +36,7 @@ $row = $result->fetch_assoc();
             </div>
             <div class="modal-body" style= "align-item: center;" >
                 
-                <img  id="image-gallery-image" class="img-responsive" src="assets/img/sony_1.jpg">
+                <img  id="image-gallery-image" style="width:100%;" class="img-responsive" src="<?php print $row['picture']; ?>">
                
             </div>
         </div>
@@ -122,43 +55,44 @@ $row = $result->fetch_assoc();
                                         <tr>
                                             <td>1</td>
                                             <td>سیستم عامل</td>
-                                            <td><?php print $row['OS']; ?></td>
+                                            <td style="direction:ltr;"><?php print $row['OS']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
                                             <td>برند گوشی</td>
-                                            <td><?php print $row['brand']; ?></td>
+                                            <td style="direction:ltr;"><?php print $row['brand']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
                                             <td>تعداد سیم کارت</td>
-                                            <td><?php print $row['sim_cart']; ?></td>
+                                            <td style="direction:ltr;"><?php print $row['sim_cart']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>4</td>
                                             <td>وزن گوشی</td>
-                                            <td><?php print $row['weight']; ?></td>
+                                            <td style="direction:ltr;"><?php print $row['weight']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>5</td>
                                             <td>اندازه گوشی</td>
-                                            <td><?php print $row['lcd']; ?></td>
+                                            <td style="direction:ltr;"><?php print $row['lcd']; ?></td>
                                         </tr>
                                          <tr>
                                             <td>6</td>
                                             <td>حافظه داخلی گوشی</td>
-                                            <td><?php print $row['intrnal_ram']; ?></td>
+                                            <td style="direction:ltr;"><?php print $row['internal_ram']; ?></td>
                                         </tr>
 
                                         <tr>
                                             <td>7</td>
                                             <td>سایر توضیحات</td>
-                                            <td>...</td>
+                                            <td><?php print $row['other_explain']; ?></td>
                                         </tr>
 
 
                                     </tbody>
                                 </table>
+                                <div class="col-sm-6"><a href="sabad.php?action=add&from=phone&id=<?php echo $row['id']; ?>&url=<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>"><?php if(islogin()){?><img src="assets/img/shopping.jpg" style="cursor: pointer" role="button"><?php }else{echo "<h5 style=\"color:red;\">برای خرید وارد شوید</h5>";}?></div>
                             </div>
                         </div>
                     

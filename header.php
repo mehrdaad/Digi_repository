@@ -20,9 +20,9 @@ $err="";
       </div>
       <div class="col-md-5 <?php if(!islogin()) print "pull-left"; ?>">
         &nbsp;&nbsp;
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" method="post" action="search.php">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="جستجو">
+              <input type="text" name="search" class="form-control" placeholder="جستجو">
             </div>
         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 
@@ -60,11 +60,13 @@ $err="";
                 <div class="dropdown-menu dropdown-settings pull-left text-center"> <a href="userlogin.html" class="btn btn-success btn-sm"data-toggle="modal" data-target="#myModal">ورود</a> &nbsp; <a href="resigter.php" class="btn btn-info btn-sm" >ثبت نام</a> </div>
               </li>
             </ul>
-            <?php else:?>
+            <?php else:
+                      $bas=query("select * from bascket where user_id=$_SESSION[id]");
+                ?>
             
            
             	<a class="btn btn-success" href="buying-form.php"><i class="glyphicon glyphicon-shopping-cart"></i> &nbsp;&nbsp; سبد خرید شما &nbsp;
-                <span class="badge" style="font-size:15px;">1</span></a>
+                <span class="badge" style="font-size:15px;"><?php echo $bas->num_rows; ?></span></a>
                 
             <?php endif; ?>
             

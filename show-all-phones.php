@@ -18,7 +18,6 @@ if(isset($_POST['advance_search']))
 
     if(isset($_POST['sort']) && $_POST['sort']!="")
         $qry.=" ".$_POST['sort'];
-    echo $qry;
     ?>
 
 <!DOCTYPE html>
@@ -94,12 +93,7 @@ if(isset($_POST['advance_search']))
                 </div>
                 <div class="col-lg-9">
                     
-                    <?php if(isset($_POST['advance_search'])){  ?>
-                    <hr />
-                    <div class="alert alert-info">
-                        نتایج جستجو برای عبارت "<strong><?php print $_POST['advance_search']; ?>"</strong>
-                    </div>
-                    <?php } ?>
+                   
                     <hr>
                     <div class="row" style="text-align: center;">
                         <div id="filter-panel" class="collapse filter-panel">
@@ -149,7 +143,7 @@ if(isset($_POST['advance_search']))
                                     <div>قیمت : <?php echo $row['price']; ?> ریال</div>
                                     <div class="row">
                                         <div class="col-sm-6"><?php echo $row['status']; ?></div>
-                                        <div class="col-sm-6"><?php if(islogin()){?><img src="assets/img/shopping.jpg" style="cursor: pointer" role="button"><?php }else{echo "<h5 style=\"color:red;\">برای خرید وارد شوید</h5>";}?></div>
+                                        <div class="col-sm-6"><a href="sabad.php?action=add&from=phone&id=<?php echo $row['id']; ?>&url=<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>"><?php if(islogin()){?><img src="assets/img/shopping.jpg" style="cursor: pointer" role="button"><?php }else{echo "<h5 style=\"color:red;\">برای خرید وارد شوید</h5>";}?></div>
                                     </div>
                                 </div>
                             </div>

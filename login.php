@@ -29,7 +29,7 @@ session_start();
 				$db_name="cms";
 				
 				try {
-							$conn = new PDO("mysql:host=$db_servername;dbname=$db_name", $db_username, $db_password);
+                    $conn = new PDO("mysql:host=$db_servername;dbname=$db_name;charset=utf8", $db_username, $db_password);
 							// set the PDO error mode to exception
 							$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 						
@@ -43,8 +43,12 @@ session_start();
                             {
 							    $row = $stmt->fetch(PDO::FETCH_ASSOC);
 							    $_SESSION['id']=$row['id'];
+                                $_SESSION['username']=$row['username'];
+                                $_SESSION['password']=$row['password'];
 							    $_SESSION['access']=$row['access'];
-							
+                                $_SESSION['name']=$row['name'];
+                                $_SESSION['fname']=$row['fname'];
+                                $_SESSION['email']=$row['email'];
 							}
 							else								
 							    $error=$error."نام کاربری و یا رمز عبور شما اشتباه است.\n";

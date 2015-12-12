@@ -125,6 +125,7 @@ $row = $result->fetch_assoc();
 
                                     </tbody>
                                 </table>
+                                <div class="col-sm-6"><a href="sabad.php?action=add&from=laptop&id=<?php echo $row['id']; ?>&url=<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>"><?php if(islogin()){?><img src="assets/img/shopping.jpg" style="cursor: pointer" role="button"><?php }else{echo "<h5 style=\"color:red;\">برای خرید وارد شوید</h5>";}?></div>
                             </div>
                         </div>
                     

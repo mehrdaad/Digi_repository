@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <?php include 'head.php'; ?>
 <?php include 'header.php'; ?>
 
@@ -32,30 +32,33 @@ if($admin)include 'admin-menu.php'; ?>
       <div class="panel-heading">کالاهایی که بیشترین خرید را داشتند</div>
       <div class="panel-body">      
       <div class="row">
+          <?php $res=query("select * from laptop limit 4"); 
+                              
+                              if (is_object($res) && $res->num_rows == 4) 
+                              {
+                                  
+                                  while($row = $res->fetch_assoc())
+                                  {
+            ?>
         <div class="col-md-3 text-center">
-        <a href="#">
-          <div><img src="assets/img/t1.jpg"></div>
-          <div class="english">Lenovo Ideapad not Gaming 510h735</div>
+        <a href="show_laptop_details.php?id=<?php echo $row['id'];?>">
+          <div><img src="<?php echo $row['picture'];?>"></div>
+          <div class="english"><?php echo $row['name']; ?></div>
         </a>
         </div>
-        <div class="col-md-3 text-center">
-        <a href="#">
-          <div><img src="assets/img/t2.jpg"></div>
-          <div class="english">Lenovo Ideapad Gaming 510h735</div>
-        </a>
-        </div>
-        <div class="col-md-3 text-center">
-        <a href="#">
-          <div><img src="assets/img/t3.jpg"></div>
-          <div class="english">Lenovo Essential Ideapad Gaming 510h735</div>
-        </a>
-        </div>
-        <div class="col-md-3 text-center">
-        <a href="#">
-          <div><img src="assets/img/t4.jpg"></div>
-          <div class="english">Asus gamin product C510h Ideapad</div>
-         </a>
-        </div>
+        
+        <?php
+                                      
+                                      
+                                  }
+                              }
+                              else{?>
+                              <div class="alert alert-danger">  متاسفانه هیچ نتیجه ای یافت نشد.</div>
+                              <?php
+                              }
+                              
+                              ?>
+     
       </div>
       
       
@@ -71,30 +74,34 @@ if($admin)include 'admin-menu.php'; ?>
       <div class="panel-body">
       
       <div class="row">
+          <?php $res=query("select * from laptop order by Date_Added desc limit 4"); 
+                              
+                              if (is_object($res) && $res->num_rows == 4) 
+                              {
+                                  
+                                  while($row = $res->fetch_assoc())
+                                  {
+          ?>
         <div class="col-md-3 text-center">
-        <a href="#">
-          <div><img src="assets/img/t5.jpg"></div>
-          <div class="english">اAsus gamin product C510h Ideapad</div>
-        </div>
-        </a>
-        <div class="col-md-3 text-center">
-        <a href="#">
-          <div><img src="assets/img/t6.jpg"></div>
-          <div class="english">Lenovo Essential Ideapad Gaming 510h735</div>
-        </a>
-        </div>
-        <div class="col-md-3 text-center">
-        <a href="#">
-          <div><img src="assets/img/t7.jpg"></div>
-          <div class="english">Lenovo Ideapad Gaming 510h735</div>
-         </a>
-        </div>
-        <div class="col-md-3 text-center">
-        <a href="#">
-          <div><img src="assets/img/t1.jpg"></div>
-          <div class="english">Lenovo Ideapad not Gaming 510h735</div>
+        <a href="show_laptop_details.php?id=<?php echo $row['id'];?>">
+          <div><img src="<?php echo $row['picture'];?>"></div>
+          <div class="english"><?php echo $row['name']; ?></div>
         </a>
         </div>
+        
+        <?php
+                                      
+                                      
+                                  }
+                              }
+                              else{?>
+                              <div class="alert alert-danger">  متاسفانه هیچ نتیجه ای یافت نشد.</div>
+                              <?php
+                              }
+                              
+                              ?>
+        
+        
       </div>
       
       </div>
@@ -104,7 +111,7 @@ if($admin)include 'admin-menu.php'; ?>
     
     <div class="panel panel-default panel-top-margin">
       <div class="panel-heading">لپتاپ های ویژه</div>
-      <div class="panel-body">در اینجا لیست تازه ترین کالاها به نمایش درخواهد آمد</div>
+      <div class="panel-body">از آنجا که ویژه کردن یک کالا تبلیغ محسوب می شود، لذا ما کالایی را ویژه نخواهیم کرد.</div>
     </div>
   </div>
 </div>
